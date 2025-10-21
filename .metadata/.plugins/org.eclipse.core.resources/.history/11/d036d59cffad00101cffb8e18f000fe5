@@ -1,0 +1,28 @@
+package test1;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+class Main {
+
+	public static void main(String[] args) {
+
+		Scanner userInput = new Scanner(System.in);
+		
+		System.out.println("inserisci 3 numeri dai");
+		
+		int[] numeri = new int[3];
+		
+		numeri[0] = userInput.nextInt();
+		numeri[1] = userInput.nextInt();
+		numeri[2] = userInput.nextInt();
+		
+		Arrays.sort(numeri);
+		
+		System.out.println("il numero maggiore è: " + numeri[2]);
+		
+		userInput.close();
+		
+	}
+
+}

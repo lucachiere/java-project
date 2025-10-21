@@ -1,0 +1,58 @@
+package calcolatrice_metodi;
+
+import java.util.Scanner;
+
+class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner userInput = new Scanner(System.in);
+		
+		String continua;
+		do {
+			System.out.println("inserisci primo numero");
+			double primo = Double.parseDouble(userInput.nextLine());
+
+			System.out.println("inserisci secondo numero");
+			double secondo = Double.parseDouble(userInput.nextLine());
+
+			System.out.println("inserisci operazione ( + - * / )");
+			String operazione = userInput.nextLine();
+
+			double risultato = 0.0;
+
+			switch (operazione) {
+			case "+":
+				risultato = primo + secondo;
+				break;
+			case "-":
+				risultato = primo - secondo;
+				break;
+			case "*":
+				risultato = primo * secondo;
+				break;
+			case "/":
+				risultato = primo / secondo;
+				break;
+			default:
+				System.out.println("operazione non valida!!");
+				return;
+			}
+
+			System.out.println("il risultato è: " + risultato);
+
+			System.out.println("vuoi continuare? y/n");
+			continua = userInput.nextLine();
+		} while (continua.equals("y"));
+		userInput.close();
+	}
+
+	static Double somma(double a, double b) {
+		return (a + b);
+	}
+
+	static void print(String x) {
+		System.out.println(x);
+	}
+
+}

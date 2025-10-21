@@ -1,0 +1,26 @@
+package somma_positivi;
+
+import java.util.Scanner;
+
+class Main {
+
+	public static void main(String[] args) {
+		Scanner userInput = new Scanner(System.in);
+
+		System.out.println("inserisci numero");
+
+		int num = Integer.parseInt(userInput.nextLine());
+
+		int somma = 0;
+		while (num != 0) {
+			somma += num;
+			num = Integer.parseInt(userInput.nextLine());
+			
+		}
+
+		System.out.println("somma: " + somma);
+		userInput.close();
+
+	}
+
+}

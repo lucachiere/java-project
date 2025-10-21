@@ -1,0 +1,22 @@
+package numero_random;
+
+import java.util.Random;
+
+class numero_random {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	static double random() {
+		Random rand = new Random();
+		int numeroRdn = rand.nextInt(100) + 1;
+		return numeroRdn;
+	}
+	
+	static void print(String x) {
+		System.out.println(x);
+	}
+
+}

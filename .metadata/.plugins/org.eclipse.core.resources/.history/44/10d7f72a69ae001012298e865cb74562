@@ -1,0 +1,58 @@
+package calcolatrice_metodi;
+
+import java.util.Scanner;
+
+class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner userInput = new Scanner(System.in);
+		
+		String continua;
+		do {
+			System.out.println("inserisci primo numero");
+			double primo = Double.parseDouble(userInput.nextLine());
+
+			System.out.println("inserisci secondo numero");
+			double secondo = Double.parseDouble(userInput.nextLine());
+
+			System.out.println("inserisci operazione ( + - * / )");
+			String operazione = userInput.nextLine();
+
+			double risultato = 0.0;
+
+			risultato = calcoli(primo, secondo, operazione);
+
+			System.out.println("il risultato è: " + risultato);
+
+			System.out.println("vuoi continuare? y/n");
+			continua = userInput.nextLine();
+		} while (continua.equals("y"));
+		userInput.close();
+	}
+
+	static double calcoli(double primo, double secondo, String op) {
+		double risultato = 0.0;
+		switch (op) {
+		case "+":
+			risultato = primo + secondo;
+			break;
+		case "-":
+			risultato = primo - secondo;
+			break;
+		case "*":
+			risultato = primo * secondo;
+			break;
+		case "/":
+			risultato = primo / secondo;
+			break;
+		}
+		return risultato;
+	}
+
+
+	static void print(String x) {
+		System.out.println(x);
+	}
+
+}

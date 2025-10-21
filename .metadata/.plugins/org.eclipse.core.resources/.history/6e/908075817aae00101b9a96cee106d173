@@ -1,0 +1,40 @@
+package numero_random;
+
+import java.util.Random;
+import java.util.Scanner;
+
+class Main {
+
+	public static void main(String[] args) {
+		Scanner userInput = new Scanner(System.in);
+		print("inserisci dimensione");
+		int userDim =  Integer.parseInt(userInput.nextLine());
+		
+		int randomNum = random(userDim);
+		print("numero estratto!!");
+		print("indovina il numero");
+		
+		int userNum = 0;
+		int tentativi = 0;
+		while(userNum != randomNum) {
+			tentativi++;
+			print("riprova!!");
+			userNum = Integer.parseInt(userInput.nextLine());
+		}
+		print("hai indovinato!! il numero era: " + randomNum);
+		print("tentativi: " + tentativi);
+		userInput.close();
+
+	}
+	
+	static int random(int max) {
+		Random rand = new Random();
+		int numeroRdn = rand.nextInt(max) + 1;
+		return numeroRdn;
+	}
+	
+	static void print(String x) {
+		System.out.println(x);
+	}
+
+}

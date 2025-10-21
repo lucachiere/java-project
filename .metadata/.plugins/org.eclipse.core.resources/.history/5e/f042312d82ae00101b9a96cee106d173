@@ -1,0 +1,20 @@
+package classi;
+
+class Studente {
+
+	String nome, cognome;
+	int eta;
+	double voto;
+	
+	Studente(String nome, String cognome, int eta, double voto){
+		this.nome = nome;
+		this.cognome = cognome;
+		this.eta = eta;
+		this.voto = voto;
+	}
+	
+	void saluta() {
+		System.out.println("ciao, sono " + nome + " " + cognome + ", ho " + eta + " anni");
+	}
+	
+}

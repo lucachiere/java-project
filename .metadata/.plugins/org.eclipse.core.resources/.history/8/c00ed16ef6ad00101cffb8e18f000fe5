@@ -1,0 +1,22 @@
+package test1;
+
+import java.util.Scanner;
+
+class Main {
+
+	public static void main(String[] args) {
+
+		Scanner userInput = new Scanner(System.in);
+
+		System.out.println("inserisci un numero: ");
+
+		int numero = userInput.nextInt();
+
+		if(numero%2==0)
+			System.out.println("pari");
+		else
+			System.out.println("dispari");
+
+	}
+
+}

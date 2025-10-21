@@ -1,0 +1,24 @@
+package test1;
+
+import java.util.Scanner;
+
+class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner userInput = new Scanner(System.in);
+		
+		System.out.println("inserisci nome");
+		
+		String name = userInput.nextLine();
+		
+		System.out.println("nome:" + name);
+		userInput.close();
+		
+	
+		
+		System.out.println("test");
+		
+	}
+
+}

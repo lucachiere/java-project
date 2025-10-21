@@ -1,0 +1,19 @@
+package test1;
+
+import java.util.Scanner;
+
+class Main {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("nome?");
+		String nome = input.nextLine();
+
+        System.out.println("Ciao, " + nome);
+
+        input.close();
+		
+	}
+
+}

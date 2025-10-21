@@ -1,0 +1,23 @@
+package test1;
+
+
+class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner userInput = new Scanner(System.in);
+		
+		System.out.println("inserisci primo numero: ");
+		
+		int primo = userInput.nextLine();
+		
+System.out.println("inserisci secondo numero: ");
+		
+		int secondo = userInput.nextLine();
+		
+		int somma = primo + secondo;
+		 System.out.println("la somma è: " + somma);
+		
+	}
+
+}

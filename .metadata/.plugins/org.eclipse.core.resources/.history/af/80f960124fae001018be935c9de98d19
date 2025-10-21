@@ -1,0 +1,37 @@
+package test1;
+
+import java.util.Scanner;
+
+class Main {
+
+	public static void main(String[] args) {
+
+		Scanner userInput = new Scanner(System.in);
+
+		System.out.println("inserisci primo numero");
+		double primo = userInput.nextFloat();
+
+		System.out.println("inserisci secondo numero");
+		double secondo = userInput.nextFloat();
+
+		System.out.println("inserisci operazione ( + - * / )");
+		String operazione = userInput.nextLine();
+		double risultato = 0.0;
+		while (operazione != null) {
+
+			if (operazione.equals("+"))
+				risultato = primo + secondo;
+			else if (operazione.equals("-"))
+				risultato = primo - secondo;
+			else if (operazione.equals("*"))
+				risultato = primo * secondo;
+			else if (operazione.equals("/"))
+				risultato = primo / secondo;
+		}
+		System.out.println("il risultato è: " + risultato);
+
+		userInput.close();
+
+	}
+
+}

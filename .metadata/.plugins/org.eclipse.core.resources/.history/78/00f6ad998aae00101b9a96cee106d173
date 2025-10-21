@@ -1,0 +1,32 @@
+package classi;
+
+import java.util.Scanner;
+
+class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner userInput = new Scanner(System.in);
+		
+		print("inserisci nome, cognome, età, voto");
+		
+		String nome = userInput.nextLine();
+		String cognome = userInput.nextLine();
+		int eta = Integer.parseInt(userInput.nextLine());
+		double voto = Double.parseDouble(userInput.nextLine());
+		
+		
+		
+		Studente s1 = new Studente(nome, cognome, eta, voto);
+		s1.saluta();
+		s1.votoMed();
+		
+		userInput.close();
+	}
+	
+	
+	static void print(String x) {
+		System.out.println(x);
+	}
+
+}

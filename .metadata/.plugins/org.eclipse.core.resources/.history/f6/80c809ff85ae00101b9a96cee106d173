@@ -1,0 +1,12 @@
+package classi;
+
+class Main {
+
+	public static void main(String[] args) {
+		Studente s1 = new Studente("luca", "chiere", 24, 4);
+
+		s1.saluta();
+		s1.votoMed();
+	}
+
+}

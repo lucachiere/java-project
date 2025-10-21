@@ -1,0 +1,23 @@
+package test1;
+
+import java.util.Scanner;
+
+class Main {
+
+	public static void main(String[] args) {
+
+		Scanner userInput = new Scanner(System.in);
+		
+		System.out.println("Inserisci una parola (o 'stop' per terminare): ");
+		
+		String parola = userInput.nextLine();
+		
+		do {
+			parola = userInput.nextLine();
+		while(parola != "stop")
+		
+		userInput.close();
+
+	}
+
+}

@@ -1,0 +1,41 @@
+package classi;
+
+import java.util.Scanner;
+
+class Main {
+
+	public static void main(String[] args) {
+
+		Scanner userInput = new Scanner(System.in);
+
+		print("inserisci numero studenti da inserire");
+		int numStud = Integer.parseInt(userInput.nextLine());
+
+		Studente[] studentArr = new Studente[numStud];
+
+		for (int i = 0; i < numStud; i++) {
+			print("inserisci nome, cognome, età, voto");
+
+			String nome = userInput.nextLine();
+			String cognome = userInput.nextLine();
+			int eta = Integer.parseInt(userInput.nextLine());
+			double voto = Double.parseDouble(userInput.nextLine());
+
+			studentArr[i] = new Studente(nome, cognome, eta, voto);
+
+		}
+
+		for(Studente s : studentArr) {
+			s.saluta();
+			s.votoMed();
+			print("---------------");
+		}
+
+		userInput.close();
+	}
+
+	static void print(String x) {
+		System.out.println(x);
+	}
+
+}
