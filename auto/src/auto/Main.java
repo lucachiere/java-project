@@ -13,10 +13,8 @@ class Main {
 	public static void main(String[] args) {
 
 		try {
-			BufferedWriter fileWrt = new BufferedWriter(new FileWriter("auto.txt", true));
-			BufferedReader fileRdr = new BufferedReader(new FileReader("auto.txt"));
+			
 			Scanner userInput = new Scanner(System.in);
-			ArrayList<Auto> autoList = new ArrayList<>();
 
 			print("menù");
 			print("1- inserisci auto");
@@ -24,6 +22,8 @@ class Main {
 
 			int selezione = Integer.parseInt(userInput.nextLine());
 			if (selezione == 1) {
+				BufferedWriter fileWrt = new BufferedWriter(new FileWriter("auto.txt", true));
+				ArrayList<Auto> autoList = new ArrayList<>();
 				boolean continua = true;
 				do {
 					print("inserisci auto");
@@ -50,7 +50,7 @@ class Main {
 					fileWrt.newLine();
 
 					print("vuoi continuare? y/n");
-					continua = userInput.nextLine().equals("y") ? true : false;
+					continua = userInput.nextLine().equalsIgnoreCase("y") ? true : false;
 
 				} while (continua);
 
@@ -59,12 +59,15 @@ class Main {
 					print("----------------");
 				}
 				fileWrt.close();
-				userInput.close();
+				
 			}else if(selezione == 2) {
+				BufferedReader fileRdr = new BufferedReader(new FileReader("auto.txt"));
 				fileRdr.lines().forEach(element -> {
 					print(element);
 				});
+				fileRdr.close();
 			}
+			userInput.close();
 
 		} catch (IOException e) {
 			print("errore nella creazione del file.");

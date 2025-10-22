@@ -13,3 +13,8 @@ modello: golf 6r
 cavalli: 271
 anno: 2011
 ----------------
+marca: lancia
+modello: delta
+cavalli: 220
+anno: 1992
+----------------
