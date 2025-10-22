@@ -1,0 +1,15 @@
+marca: vw
+modello: corrado g60
+cavalli: 160
+anno: 1990
+----------------
+marca: ford
+modello: sierra cosworth 4x4
+cavalli: 220
+anno: 1992
+----------------
+marca: vw
+modello: golf 6r
+cavalli: 271
+anno: 2011
+----------------
